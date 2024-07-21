@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./index.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <h1>Detect Duplicates</h1>
+      <ul>
+        <li>
+          <h2>Detect Duplicates Using Set</h2>
+          <h3>allows to detect the duplicates in B(n)</h3>
+          <pre>
+            <code>
+// B(n) 
+function hasDuplicateUsingSet(arr) {
+  const set = new Set();
+  for (let i = 0; i < arr.length; i++){
+    let temp = typeof arr[i] ===
+    "object" && arr[i] !== null ? JSON.stringify(arr[i]) : arr[i];
+    if (set.has(temp)) return true; 
+    set.add(temp); 
+  } 
+  return false; 
+}
+            </code>
+          </pre>
+        </li>
+        <li>
+          <h2>Detect Duplicates Using Sort</h2>
+          <h3>allows to detect the duplicates in B(nlog(n))</h3>
+          <pre>
+            <code>
+// B(nlog(n))
+function hasDuplicateUsingSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] =
+      typeof arr[i] === "object" && arr[i] !== null
+        ? JSON.stringify(arr[i])
+        : arr[i];
+  }
+  arr.sort();
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] === arr[i + 1]) return true;
+  }
+  return false;
+}
+            </code>
+          </pre>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>De-Structure</h1>
+      <pre>
+        <code>
+const arr2 = [
+  8,
+  "55",
+  [2, "Hello World", { a: 2, b: 5 }, false],
+  {
+    arr: [true, 1, NaN, new Array(2, 33)],
+    test: null,
+    obj: { d: "Moha", last: [2, false, undefined] },
+  },
+];
+const [
+  ,
+  ,
+  ,
+  {
+    arr: [, , , [, num]],
+    _,
+    obj: { d },
+  },
+] = arr2;
+        </code>
+      </pre>
+    </section>
+  </body>
+</html>

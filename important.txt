@@ -1,0 +1,39 @@
+project ==>  
+  send the (id) in all reqs 
+  tokens => 1- access tokens like (id) stored in local storage to remember the user
+           
+            2- refresh tokens like (id)
+JSON => javascript object notation
+AST => Abstract Syntax Tree
+  - 1- Parsing => 
+  - 2- Transformation => 
+  - 3- Code Generation =>  
+Hoisting => !!!!important!!!!
+  - 1- var => raed the variable and assign undefined , can use the variable before the declaration being hoisted
+  - 2- let => can't use the variable before the declaration => temporal dead zone
+  - 3- const => can't use the variable before the declaration => temporal dead zone ==> can't give initial value
+  - 4- function declaration => can use the function before the declaration as it is hoisted.
+  - 5- assign function to variable => using let and const not being hoisted  
+  - 5- assign function to variable => using var hoisted as undefined  
+  - 6- arrow function => depends on the type of variable hoisted or not
+  - 7- async function => like normal function hoisted
+
+// Global Execution Context => variable Environment , scope chain , this => is stored in STACK memory 
+
+// Execution Context
+  - 1- Creation Phase
+    - 1- Variable Environment
+    - 2- Scope Chain
+    - 3- this
+  - 2- Execution Phase
+    - 1- Memory Allocation
+    - 2- Code Execution
+
+
+Scope => 
+  - 1- Global Scope => 
+  - 2- Local Scope (Functional scope) => 
+  - 3- Block Scope => 
+  - 4- Lexical Scope => based on the code structure not the runtime
+
+variable loookup => 
